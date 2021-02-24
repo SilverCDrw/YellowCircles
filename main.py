@@ -29,14 +29,14 @@ class Widget(QWidget):
         qp.end()
 
     def drawCircles(self, qp):
-        qp.setBrush(QColor('#ffcc00'))
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         x = randint(1, self.width())
         y = randint(1, self.height())
         d = randint(10, 200)
         qp.drawEllipse(x - d // 2, y - d // 2, d, d)
 
     def on_click(self, btn):
-        self.trig =  True
+        self.trig = True
         self.update()
 
 
